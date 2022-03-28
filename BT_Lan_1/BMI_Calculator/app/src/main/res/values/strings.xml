@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BMI Calculator</string>
+    <string name="weight">Cân nặng</string>
+    <string name="height">Chiều cao</string>
+    <string name="underweight">Gầy</string>
+    <string name="normal">Bình thường</string>
+    <string name="overweight">Thừa cân</string>
+    <string name="obese_class_i">Béo phì cấp 1</string>
+    <string name="obese_class_ii">Béo phì cấp 2</string>
+    <string name="obese_class_iii">Béo phì cấp 3</string>
+    <string name="button">TÍNH</string>
+</resources>
