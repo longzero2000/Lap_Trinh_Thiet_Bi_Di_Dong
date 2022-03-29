@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">60136035_Bai16</string>
+        <string-array name="Name">
+            <item>Tí</item>
+            <item>Sửu</item>
+            <item>Dần</item>
+            <item>Mão</item>
+        </string-array>
+</resources>
