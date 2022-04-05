@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
             EditText username = (EditText) findViewById(R.id.edtUserName);
             EditText password = (EditText) findViewById(R.id.edtPass);
-            TextView attempts = (TextView) findViewById(R.id.attempts);
 
             String x = username.getText().toString();
             String y = password.getText().toString();
@@ -37,10 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
             if ((x.equals(user)) && (y.equals(pass))) {
                 Toast.makeText(MainActivity.this, "Username and Password is correct", Toast.LENGTH_SHORT).show();
-                attempts.setText((String.valueOf(R.id.textView3)));
-
             } else {
-                at++;
+                at=at+1;
+                TextView attempts = (TextView) findViewById(R.id.textView3);
+                attempts.setText((String.valueOf(at)));
                 Toast.makeText(MainActivity.this, "Username and Password is wrong!", Toast.LENGTH_SHORT).show();
             }
         }
