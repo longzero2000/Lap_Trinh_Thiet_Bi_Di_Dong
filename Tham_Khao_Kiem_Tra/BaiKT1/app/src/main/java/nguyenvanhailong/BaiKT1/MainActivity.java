@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             String y = password.getText().toString();
             String user ="maicuongtho";
             String pass ="Cntt60ntu!";
-            
+
             if ((x.equals(user)) && (y.equals(pass))) {
                 Toast.makeText(MainActivity.this, "Username and Password is correct", Toast.LENGTH_SHORT).show();
             } else {
