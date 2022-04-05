@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnXacNhan = (Button) findViewById(R.id.btnOK);
         btnXacNhan.setOnClickListener(XuLyDangNhap);
     }
-
+    int at = 0;
     View.OnClickListener XuLyDangNhap = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -31,13 +31,11 @@ public class MainActivity extends AppCompatActivity {
             String y = password.getText().toString();
             String user ="maicuongtho";
             String pass ="Cntt60ntu!";
-            int at = 0;
-
-
+            
             if ((x.equals(user)) && (y.equals(pass))) {
                 Toast.makeText(MainActivity.this, "Username and Password is correct", Toast.LENGTH_SHORT).show();
             } else {
-                at=at+1;
+                at++;
                 TextView attempts = (TextView) findViewById(R.id.textView3);
                 attempts.setText((String.valueOf(at)));
                 Toast.makeText(MainActivity.this, "Username and Password is wrong!", Toast.LENGTH_SHORT).show();
