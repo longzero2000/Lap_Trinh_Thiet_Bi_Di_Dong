@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BaiKT2</string>
+    <string name="action_settings">Settings</string>
+    <string name="bill_hint">Enter your bill here...</string>
 </resources>

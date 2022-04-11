@@ -1,18 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp" tools:context=".MainActivity">
 
-    <TextView
+    <EditText android:id="@+id/bill"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/bill_hint"
+        android:inputType="numberDecimal"/>
+
+    <RadioGroup android:id="@+id/tip_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bill">
+
+        <RadioButton android:id="@+id/tip_radio_low"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="13%"
+            android:checked="true"/>
+
+        <RadioButton android:id="@+id/tip_radio_mid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%"/>
+
+        <RadioButton android:id="@+id/tip_radio_high"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18%"/>
+    </RadioGroup>
+
+    <Button android:id="@+id/calculate_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Calculate Your Tip"
+        android:layout_below="@id/tip_radio"
+        android:layout_alignParentRight="true"
+        android:onClick="calculateTip"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView android:id="@+id/display_tip"
+        android:layout_below="@id/calculate_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+
+</RelativeLayout>
