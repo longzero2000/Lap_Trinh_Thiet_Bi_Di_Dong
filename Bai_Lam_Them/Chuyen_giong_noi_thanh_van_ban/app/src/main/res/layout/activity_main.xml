@@ -24,12 +24,13 @@
 
     <ImageButton
         android:id="@+id/btn"
-        android:layout_width="211dp"
-        android:layout_height="195dp"
+        android:layout_width="148dp"
+        android:layout_height="156dp"
         android:layout_centerInParent="true"
-        android:background="@null"
-        android:scaleType="center"
+        android:backgroundTint="#FFFFFF"
+        android:scaleType="centerCrop"
         android:shape="oval"
-        android:src="@drawable/ic_mic" />
+        android:src="@drawable/mic_ic"
+        android:visibility="visible" />
 
 </RelativeLayout>

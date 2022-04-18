@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import androidx.annotation.Nullable;
 import android.speech.RecognitionService;
 import android.speech.RecognizerIntent;
 import android.view.View;
@@ -35,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
     private void speak(){
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hãy ấn vào biểu tượng");
+        startActivityForResult(intent, 100);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
+        if(requestCode == 100 && resultCode == RESULT_OK){
+            mTextTv.setText(data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS).get(0));
+        }
     }
 }
