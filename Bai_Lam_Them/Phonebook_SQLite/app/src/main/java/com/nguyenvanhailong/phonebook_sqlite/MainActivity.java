@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
 
-                //đặt hộp thoại_contact_details.xml thành trình tạo alertdialog
+                //đặt hộp dialog_contact_details.xml thành trình tạo alertdialog
                 alertDialogBuilder.setView(getEmpIdView);
 
                 final EditText nameInput = (EditText) getEmpIdView.findViewById(R.id.editTextDialogNameInput);
