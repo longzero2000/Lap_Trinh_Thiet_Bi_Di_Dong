@@ -9,9 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Country_SQLite">
+        <activity android:name=".AddCountryActivity"
+            android:label="Thêm sách"
+            android:parentActivityName=".CountryListActivity"/>
+        <activity
+            android:name=".ModifyCountryActivity"
+            android:label="Cập nhật sách"
+            android:parentActivityName=".CountryListActivity" />
         <activity
             android:name=".CountryListActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
